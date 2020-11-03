@@ -1,113 +1,237 @@
 <head>
-<meta charset="utf-8">
-<title>List</title>
-<link rel="icon" href="https://cdn.discordapp.com/attachments/619853456500457474/709049797838897192/icon_a.png" type="image/icon type">
+    <meta charset="utf-8">
+    <title>List</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/619853456500457474/709049797838897192/icon_a.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <script src="https://mastere00.github.io/MODTH/script.js"></script>
+    <style>
+        html {
+            font-family: 'Kanit', sans-serif;
+        }
 
-<style>
-@font-face{font-family:'Pier-Sans';src:url('../fonts/PierSans-Regular.ttf');}
-@font-face{font-family:'Serithai';src:url('../fonts/Serithai-Regular.ttf');}
-::-webkit-scrollbar
-{
-	width:0;
-}
-body
-{
-	background:#000;
-	font-family:Serithai,sans-serif;
+        ::-webkit-scrollbar {
+            width: 0;
+        }
 
-}
-h1
-{
-	color:#000;
-	font-family:Pier-Sans,sans-serif;
-	cursor:default;
-}
+        body {
+            background: #000;
+        }
 
-.content
-{
-	background:#FFF;
-	margin:50px;
-	padding:20px;
-	border-radius:10px;
-}
+        h1 {
+            font-size: 20px;
+            color: #000;
+            cursor: default;
+        }
 
+        .content {
+            background: #FFF;
+            margin: 50px;
+            padding: 20px;
+            border-radius: 10px;
+        }
 
-.line
-{
-	border-bottom:1px solid #000;
-}
+        .line {
+            border-bottom: 1px solid #000;
+        }
 
-a
-{
-	text-decoration:none;
-	color:#000;
-	font-size:16px;
-	cursor:pointer;
-}
-.heander
-{
-	border-top:1px solid #000;
-	border-bottom:1px solid #000;
-	margin:15px;
-	width:90%;
-	background:#FFF;
-	transition:.3s;
-}
-.heander:hover
-{
-	background:rgb(000,000,000,.2);
-}
-.version
-{
-	font-size:14px;
-	background:rgb(0,0,0);
-	color:#FFF;
-	width:60px;
-	border-radius:5px;
-	padding:1px 10px;
-}
-@media screen and (max-device-width:768px)
-{
-	.content
-	{
-		height: 100%;
-	}
-	.heander p
-	{
-		font-size: 1cm;
-	}
-}
+        a {
+            text-decoration: none;
+            color: #000;
+            font-size: 16px;
+            cursor: pointer;
+        }
 
-</style>
+        .heander {
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            margin: 15px;
+            width: 90%;
+            background: #FFF;
+            transition: .3s;
+        }
 
+        .heander:hover {
+            background: rgb(000,000,000,.2);
+        }
+
+        .version {
+            font-size: 14px;
+            background: rgb(0,0,0);
+            color: #FFF;
+            width: 60px;
+            border-radius: 5px;
+            padding: 1px 10px;
+        }
+
+        .notification_alert {
+            display: none;
+        }
+
+        .notification_bg {
+            z-index: 2;
+            background: rgb(0, 0, 0, .7);
+            position: fixed;
+            width: 500px;
+            height: 270px;
+            top: 50%;
+            left: 50%;
+            margin: 0;
+            transform: scale(100);
+        }
+
+        .notification {
+            -webkit-animation-name: notification;
+            animation-name: notification;
+            -webkit-animation-duration: .3s;
+            animation-duration: .3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            background: #FFF;
+            position: fixed;
+            border-radius: 5px;
+            padding: 10px;
+            transition: .2s;
+            align-item: center;
+        }
+
+        @-webkit-keyframes notification {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes notification {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .btn_b {
+            position: relative;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background: #242424;
+            color: #fff;
+            transition: .2s;
+            margin-left: 5;
+        }
+
+        .btn_b:hover {
+            background: #b1abab;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .notification img {
+            z-index: 90;
+            margin: 0 100;
+            border-radius: 15px;
+            transition: .2s;
+        }
+		@media screen and (max-device-width:768px)
+		{
+			.content
+			{
+				height:100%
+			}
+			h1 
+			{
+				font-size:1cm;
+			}
+			p
+			{
+				font-size:1cm;
+			}
+			.version
+			{
+				font-size:20px;
+				
+			}
+			.notification
+			{
+				left: 50%;
+				top: 50%;
+				width:80%;
+				height:50%;
+				padding:20px;
+			}
+			.notification img 
+			{
+				width:500;
+			}
+			.notification a 
+			{
+				font-size:45px;
+			}
+			
+		}
+		
+    </style>
 </head>
 <html>
-<body>
-
-<div class="content">
-<h1>PPSSPP MOD-Thai Translation List.</h1>
-<p class="version">Ver 1.0.1</p>
-<br>
-<a href="https://mastere00.github.io/MODTH/Persona3.html" target="_blank"><div class="heander">
-<p>Persona 3 Thai-Textures</p>
-</div></a>
-
-<a href="https://mastere00.github.io/MODTH/GodEater2.html" target="_blank"><div class="heander">
-<p>GodEater 2 Thai-Textures</p>
-</div></a>
-
-<a href="https://mastere00.github.io/MODTH/MonsterHunterPortable3rd.html" target="_blank"><div class="heander">
-<p>Monster Hunter Portable 3rd Thai-Textures</p>
-</div></a>
-
-<a href="https://mastere00.github.io/MODTH/GodEaterBurst.html" target="_blank"><div class="heander">
-<p>GodEaterBurst Thai-Textures</p>
-</div></a>
-
-<br>
-<p class="line"></p>
-<p>COPYRIGHT © 2020 Asnise Earth</p>
-</div>
-
-</body>
+    <body>
+        <div class="notification_alert" id="notification_alert">
+            <div class="notification_bg"></div>
+            <div class="notification">
+                <h1 id="title_name"></h1>
+                <p id="content_mod"></p>
+                <br>
+                <img id="img_1" src="" width=450>
+                <br>
+                <a onclick="cansel_win('notification_alert')" class="btn_b">กลับ</a>
+                <a href="https://github.com/mastere00/MODTH/raw/master/NSU_Textures.zip" class="btn_b" id="download_bt">ดาวน์โหลด</a>
+            </div>
+        </div>
+        <div class="content">
+            <h1>PPSSPP MOD-Thai Translation List.</h1>
+            <p class="version">Ver 1.0.1</p>
+            <br>
+            <a onclick="cansel_win('notification_alert','GodEater 2 Thai-Textures','เป็นการแปล HUD และ GUI บางส่วนของเกม (แปลโดย Asnise) เป็น Textures สำหรับโปรแกรม Emu PPSSPP','https://cdn.discordapp.com/attachments/712618938499858497/759011891002867722/NPJH50832_00002.png','https://github.com/mastere00/MODTH/raw/master/GE2_Textrues.rar')" target="_blank">
+                <div class="heander">
+                    <p>GodEater 2 Thai-Textures</p>
+                    <p class="version">90 %</p>
+                </div>
+            </a>
+            <a onclick="cansel_win('notification_alert','Naruto Shippuden Ultimate Impact Thai-Textures','เป็นการแปล HUD และ GUI บางส่วนของเกม (แปลโดย Asnise) เป็น Textures สำหรับโปรแกรม Emu PPSSPP','https://cdn.discordapp.com/attachments/712618938499858497/773222805868118036/ULUS10582_00000.png','https://github.com/mastere00/MODTH/raw/master/NSU_Textures.zip')" target="_blank">
+                <div class="heander">
+                    <p>Naruto Shippuden Ultimate Impact Thai-Textures</p>
+                    <p class="version">70 %</p>
+                </div>
+            </a>
+            <a onclick="cansel_win('notification_alert','Persona 3 Thai-Textures','เป็นการแปล HUD และ GUI บางส่วนของเกม (แปลโดย Asnise) เป็น Textures สำหรับโปรแกรม Emu PPSSPP','https://cdn.discordapp.com/attachments/712618938499858497/722456899538124850/ULUS10512_00001.png','https://github.com/mastere00/MODTH/raw/master/P3_Textrues.rar')" target="_blank">
+                <div class="heander">
+                    <p>Persona 3 Thai-Textures</p>
+                    <p class="version">60 %</p>
+                </div>
+            </a>
+            <a onclick="cansel_win('notification_alert','Monster Hunter Portable 3rd Thai-Textures','เป็นการแปล HUD และ GUI บางส่วนของเกม (แปลโดย Asnise) เป็น Textures สำหรับโปรแกรม Emu PPSSPP','https://cdn.discordapp.com/attachments/712618938499858497/712648427288264724/NPJB40001_00060.png','https://github.com/mastere00/MODTH/raw/master/MHP3rd_Textrue.rar')" target="_blank">
+                <div class="heander">
+                    <p>Monster Hunter Portable 3rd Thai-Textures</p>
+                    <p class="version">80 %</p>
+                </div>
+            </a>
+            <a onclick="cansel_win('notification_alert','GodEaterBurst Thai-Textures','เป็นการแปล HUD และ GUI บางส่วนของเกม (แปลโดย Asnise) เป็น Textures สำหรับโปรแกรม Emu PPSSPP','https://cdn.discordapp.com/attachments/712618938499858497/773224907462410330/ULUS10563_00002.png','https://github.com/mastere00/MODTH/raw/master/GE_Textrues.rar')" target="_blank">
+                <div class="heander">
+                    <p>GodEaterBurst Thai-Textures</p>
+                    <p class="version">90 %</p>
+                </div>
+            </a>
+            <br>
+            <p class="line"></p>
+            <p>COPYRIGHT © 2020 Asnise Earth</p>
+        </div>
+    </body>
 </html>

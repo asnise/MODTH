@@ -14,3 +14,6 @@ function cansel_win(idtag ,name,content,img_1,download)
 		document.getElementById("content_mod").innerHTML = content;
 		document.getElementById("download_bt").href = download;
 };
+
+
+
